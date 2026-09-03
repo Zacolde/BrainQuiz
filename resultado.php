@@ -1,62 +1,112 @@
 <?php
 
-$quiz = $_POST["quiz"];
+$quiz = $_POST["quiz"] ?? "";
 
 $respostas = [];
 
 if ($quiz == "paises") {
     $respostas = [
-        "Paris",
-        "Russia",
-        "Africa",
-        "Italia",
-        "Tóquio"
+        "India",
+        "Canberra",
+        "Franca",
+        "Panama",
+        "Brasil",
+        "Turquia",
+        "Espanha",
+        "Romenia",
+        "Turquia",
+        "Wellington",
+        "Suecia",
+        "Bolivia",
+        "Reykjavik",
+        "ReinoUnido",
+        "Japao"
     ];
 }
 
 if ($quiz == "corpo") {
     $respostas = [
-        "Coracao",
-        "Pele",
-        "206",
-        "Pulmao",
-        "Figado"
+        "Cerebelo",
+        "Hemacias",
+        "Pancreas",
+        "FiltrarSangue",
+        "Tendao",
+        "Ligamento",
+        "Aorta",
+        "MedulaEspinhal",
+        "Alveolos",
+        "D",
+        "IntestinoDelgado",
+        "Coagulacao",
+        "Tiroxina",
+        "Epiglote",
+        "Neuronio"
     ];
 }
 
 if ($quiz == "historia") {
     $respostas = [
-        "1822",
+        "Cabral",
+        "Acucar",
+        "Divisao",
+        "Salvador",
+        "1808",
         "DomPedroI",
-        "1889",
+        "InconfidenciaMineira",
+        "Tiradentes",
+        "LeiAurea",
+        "PrincesaIsabel",
+        "Republica",
         "Deodoro",
-        "Imperio"
+        "Getulio",
+        "Juscelino",
+        "1960"
     ];
 }
 
 if ($quiz == "matematica") {
     $respostas = [
-        "15",
-        "54",
+        "100",
+        "27",
+        "60",
         "25",
-        "7",
-        "50"
+        "170",
+        "12",
+        "27",
+        "60",
+        "162",
+        "60",
+        "60",
+        "36",
+        "25",
+        "12",
+        "18"
     ];
 }
 
 if ($quiz == "conhecimentos") {
     $respostas = [
-        "Jupiter",
-        "365",
-        "Portugues",
-        "Marte",
-        "Termometro"
+        "Saturno",
+        "Ferro",
+        "Troposfera",
+        "Machado",
+        "Pacifico",
+        "Nitrogenio",
+        "Newton",
+        "Fotossintese",
+        "UniaoSovietica",
+        "Bit",
+        "Vaporizacao",
+        "Africa",
+        "Barometro",
+        "Sol",
+        "Inca"
     ];
 }
 
 $pontos = 0;
 
-for ($i = 1; $i <= 5; $i++) {
+for ($i = 1; $i <= 15; $i++) {
 
     if (isset($_POST["q$i"]) && $_POST["q$i"] == $respostas[$i - 1]) {
         $pontos++;
@@ -68,37 +118,44 @@ for ($i = 1; $i <= 5; $i++) {
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a href="quizzes.php">← Voltar para os quizzes</a>
+    <main class="pagina-resultado">
 
-    <h1>Resultado</h1>
+        <div class="resultado">
 
-    <h2>Você acertou <?php echo $pontos; ?> de 5!</h2>
+            <h1>Resultado 📑</h1>
 
-    <?php
+            <h2>Você acertou <?php echo $pontos; ?> de 15!</h2>
 
-    if ($pontos == 5) {
-        echo "<p>Parabéns! Você acertou todas!</p>";
-    } elseif ($pontos >= 3) {
-        echo "<p>Muito bom! Você teve um ótimo resultado!</p>";
-    } else {
-        echo "<p>Continue estudando e tente novamente!</p>";
-    }
+            <?php
 
-    ?>
+            if ($pontos == 15) {
+                echo "<p>Parabéns! Você acertou todas!</p>";
+            } elseif ($pontos >= 8) {
+                echo "<p>Muito bom! Você teve um ótimo resultado!</p>";
+            } else {
+                echo "<p>Continue estudando e tente novamente!</p>";
+            }
 
-    <br>
+            ?>
 
-    <a href="quizzes.php">
-        <button>Escolher outro quiz</button>
-    </a>
+            <a href="quizzes.php" class="voltar">
+                Escolher outro quiz
+            </a>
+
+        </div>
+
+    </main>
 
 </body>
+
 </html>

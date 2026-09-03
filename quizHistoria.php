@@ -1,61 +1,536 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Quiz de História do Brasil</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de História do Brasil - BrainQuiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a href="quizzes.php">← Voltar</a>
+<header>
 
-    <h1>Quiz de História do Brasil</h1>
-    <p>Teste seus conhecimentos sobre a história do Brasil!</p>
+    <div class="logo">
+        🧠 BrainQuiz
+    </div>
 
-    <form action="resultado.php" method="POST">
+    <nav>
+        <a href="index.php">Início</a>
+        <a href="quizzes.php">Quizzes</a>
+    </nav>
+
+</header>
+
+<form action="resultado.php" method="POST">
+
     <input type="hidden" name="quiz" value="historia">
 
-        <h2>1. Em que ano o Brasil declarou sua independência?</h2>
+    <div class="pergunta">
+        <div class="pergunta-box">
 
-        <input type="radio" name="q1" value="1500"> 1500<br>
-        <input type="radio" name="q1" value="1822"> 1822<br>
-        <input type="radio" name="q1" value="1889"> 1889<br>
-        <input type="radio" name="q1" value="1930"> 1930<br>
+            <div class="numero">Pergunta 1 de 15</div>
 
-        <h2>2. Quem proclamou a Independência do Brasil?</h2>
+            <h2>Qual acontecimento marcou o início da presença portuguesa no Brasil?</h2>
 
-        <input type="radio" name="q2" value="Tiradentes"> Tiradentes<br>
-        <input type="radio" name="q2" value="DomPedroI"> Dom Pedro I<br>
-        <input type="radio" name="q2" value="GetulioVargas"> Getúlio Vargas<br>
-        <input type="radio" name="q2" value="DomPedroII"> Dom Pedro II<br>
+            <label class="alternativa">
+                <input type="radio" name="q1" value="Tratado">
+                Tratado de Tordesilhas
+            </label>
 
-        <h2>3. Em que ano foi proclamada a República no Brasil?</h2>
+            <label class="alternativa">
+                <input type="radio" name="q1" value="Cabral">
+                Chegada de Pedro Álvares Cabral
+            </label>
 
-        <input type="radio" name="q3" value="1822"> 1822<br>
-        <input type="radio" name="q3" value="1850"> 1850<br>
-        <input type="radio" name="q3" value="1889"> 1889<br>
-        <input type="radio" name="q3" value="1900"> 1900<br>
+            <label class="alternativa">
+                <input type="radio" name="q1" value="Independencia">
+                Independência do Brasil
+            </label>
 
-        <h2>4. Quem foi o primeiro presidente do Brasil?</h2>
+            <label class="alternativa">
+                <input type="radio" name="q1" value="Republica">
+                Proclamação da República
+            </label>
 
-        <input type="radio" name="q4" value="GetulioVargas"> Getúlio Vargas<br>
-        <input type="radio" name="q4" value="Deodoro"> Marechal Deodoro da Fonseca<br>
-        <input type="radio" name="q4" value="Juscelino"> Juscelino Kubitschek<br>
-        <input type="radio" name="q4" value="Floriano"> Floriano Peixoto<br>
+        </div>
+    </div>
 
-        <h2>5. Qual foi o período em que o Brasil foi governado por imperadores?</h2>
 
-        <input type="radio" name="q5" value="Republica"> República<br>
-        <input type="radio" name="q5" value="Imperio"> Império<br>
-        <input type="radio" name="q5" value="Colonial"> Período Colonial<br>
-        <input type="radio" name="q5" value="Regencia"> Regência<br>
+    <div class="pergunta">
+        <div class="pergunta-box">
 
-        <br><br>
+            <div class="numero">Pergunta 2 de 15</div>
 
-        <button type="submit">Finalizar Quiz</button>
+            <h2>Qual foi uma das principais atividades econômicas do Brasil colonial no Nordeste?</h2>
 
-    </form>
+            <label class="alternativa">
+                <input type="radio" name="q2" value="Cafe">
+                Café
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="Acucar">
+                Açúcar
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="Ouro">
+                Ouro
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="Borracha">
+                Borracha
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 3 de 15</div>
+
+            <h2>O que estabelecia o Tratado de Tordesilhas?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="Escravidao">
+                O fim da escravidão
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="Divisao">
+                A divisão de terras entre Portugal e Espanha
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="Independencia">
+                A independência do Brasil
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="Republica">
+                A criação da República
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 4 de 15</div>
+
+            <h2>Qual foi a primeira capital do Brasil?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="Rio">
+                Rio de Janeiro
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="Brasilia">
+                Brasília
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="Salvador">
+                Salvador
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="Recife">
+                Recife
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 5 de 15</div>
+
+            <h2>Em que ano a família real portuguesa chegou ao Brasil?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="1500">
+                1500
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="1808">
+                1808
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="1822">
+                1822
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="1889">
+                1889
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 6 de 15</div>
+
+            <h2>Quem proclamou a Independência do Brasil?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q6" value="DomJoao">
+                Dom João VI
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q6" value="DomPedroI">
+                Dom Pedro I
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q6" value="Tiradentes">
+                Tiradentes
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q6" value="Deodoro">
+                Deodoro da Fonseca
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 7 de 15</div>
+
+            <h2>Qual movimento ficou conhecido por defender a independência de Minas Gerais no século XVIII?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q7" value="RevolucaoFarroupilha">
+                Revolução Farroupilha
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q7" value="InconfidenciaMineira">
+                Inconfidência Mineira
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q7" value="Sabinada">
+                Sabinada
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q7" value="Canudos">
+                Guerra de Canudos
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 8 de 15</div>
+
+            <h2>Qual personagem é considerado o principal símbolo da Inconfidência Mineira?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q8" value="Tiradentes">
+                Tiradentes
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q8" value="Getulio">
+                Getúlio Vargas
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q8" value="Juscelino">
+                Juscelino Kubitschek
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q8" value="Deodoro">
+                Deodoro da Fonseca
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 9 de 15</div>
+
+            <h2>Qual lei aboliu oficialmente a escravidão no Brasil?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q9" value="LeiVentre">
+                Lei do Ventre Livre
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q9" value="LeiSexagenarios">
+                Lei dos Sexagenários
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q9" value="LeiAurea">
+                Lei Áurea
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q9" value="LeiImperial">
+                Lei Imperial
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 10 de 15</div>
+
+            <h2>Quem assinou a Lei Áurea?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q10" value="DomPedroII">
+                Dom Pedro II
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q10" value="PrincesaIsabel">
+                Princesa Isabel
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q10" value="DomPedroI">
+                Dom Pedro I
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q10" value="Getulio">
+                Getúlio Vargas
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 11 de 15</div>
+
+            <h2>O que aconteceu em 15 de novembro de 1889?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q11" value="Independencia">
+                Independência do Brasil
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q11" value="Abolicao">
+                Abolição da escravidão
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q11" value="Republica">
+                Proclamação da República
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q11" value="Chegada">
+                Chegada da família real
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 12 de 15</div>
+
+            <h2>Quem foi o primeiro presidente do Brasil?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q12" value="Getulio">
+                Getúlio Vargas
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q12" value="Deodoro">
+                Deodoro da Fonseca
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q12" value="Floriano">
+                Floriano Peixoto
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q12" value="Juscelino">
+                Juscelino Kubitschek
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 13 de 15</div>
+
+            <h2>Qual presidente governou o Brasil durante o período conhecido como Estado Novo?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q13" value="Juscelino">
+                Juscelino Kubitschek
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q13" value="Getulio">
+                Getúlio Vargas
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q13" value="Deodoro">
+                Deodoro da Fonseca
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q13" value="Collor">
+                Fernando Collor
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 14 de 15</div>
+
+            <h2>Qual presidente ficou associado à construção de Brasília?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q14" value="Vargas">
+                Getúlio Vargas
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q14" value="Juscelino">
+                Juscelino Kubitschek
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q14" value="Jango">
+                João Goulart
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q14" value="Sarney">
+                José Sarney
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Pergunta 15 de 15</div>
+
+            <h2>Em que ano Brasília foi inaugurada?</h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q15" value="1950">
+                1950
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q15" value="1955">
+                1955
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q15" value="1960">
+                1960
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q15" value="1964">
+                1964
+            </label>
+
+        </div>
+    </div>
+
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">Final do Quiz</div>
+
+            <h2>🎉 Você chegou ao final!</h2>
+
+            <p>Clique no botão abaixo para ver seu resultado.</p>
+
+            <button class="finalizar" type="submit">
+                Finalizar Quiz
+            </button>
+
+        </div>
+    </div>
+
+</form>
+
+<script>
+    const perguntas = document.querySelectorAll(".pergunta-box");
+
+    const observador = new IntersectionObserver(function(elementos) {
+
+        elementos.forEach(function(elemento) {
+
+            if (elemento.isIntersecting) {
+                elemento.target.classList.add("visivel");
+            }
+
+        });
+
+    }, {
+        threshold: 0.5
+    });
+
+    perguntas.forEach(function(pergunta) {
+        observador.observe(pergunta);
+    });
+</script>
 
 </body>
 </html>

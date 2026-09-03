@@ -1,62 +1,639 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <title>Quiz de Países</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Países - BrainQuiz</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <a href="quizzes.php">← Voltar</a>
+<header>
 
-    <h1>Quiz de Países</h1>
-    <p>Teste seus conhecimentos sobre diferentes países!</p>
+    <div class="logo">
+        🧠 BrainQuiz
+    </div>
 
-    <form action="resultado.php" method="POST">
+    <nav>
+        <a href="index.php">Início</a>
+        <a href="quizzes.php">Quizzes</a>
+    </nav>
+
+</header>
+
+<form action="resultado.php" method="POST">
 
     <input type="hidden" name="quiz" value="paises">
 
-        <h2>1. Qual é a capital da França?</h2>
+    <!-- PERGUNTA 1 -->
 
-        <input type="radio" name="q1" value="Paris"> Paris<br>
-        <input type="radio" name="q1" value="Madrid"> Madrid<br>
-        <input type="radio" name="q1" value="Roma"> Roma<br>
-        <input type="radio" name="q1" value="Berlim"> Berlim<br>
+    <div class="pergunta">
+        <div class="pergunta-box">
 
-        <h2>2. Qual é o maior país do mundo em território?</h2>
+            <div class="numero">
+                Pergunta 1 de 15
+            </div>
 
-        <input type="radio" name="q2" value="Brasil"> Brasil<br>
-        <input type="radio" name="q2" value="China"> China<br>
-        <input type="radio" name="q2" value="Russia"> Rússia<br>
-        <input type="radio" name="q2" value="Canada"> Canadá<br>
+            <h2>
+                Qual país possui atualmente a maior população do mundo?
+            </h2>
 
-        <h2>3. Em qual continente fica o Egito?</h2>
+            <label class="alternativa">
+                <input type="radio" name="q1" value="India">
+                Índia
+            </label>
 
-        <input type="radio" name="q3" value="Asia"> Ásia<br>
-        <input type="radio" name="q3" value="Africa"> África<br>
-        <input type="radio" name="q3" value="Europa"> Europa<br>
-        <input type="radio" name="q3" value="America"> América<br>
+            <label class="alternativa">
+                <input type="radio" name="q1" value="China">
+                China
+            </label>
 
-        <h2>4. Qual país é conhecido pelo formato de uma bota?</h2>
+            <label class="alternativa">
+                <input type="radio" name="q1" value="EstadosUnidos">
+                Estados Unidos
+            </label>
 
-        <input type="radio" name="q4" value="Italia"> Itália<br>
-        <input type="radio" name="q4" value="Portugal"> Portugal<br>
-        <input type="radio" name="q4" value="Grecia"> Grécia<br>
-        <input type="radio" name="q4" value="Japao"> Japão<br>
+            <label class="alternativa">
+                <input type="radio" name="q1" value="Indonesia">
+                Indonésia
+            </label>
 
-        <h2>5. Qual é a capital do Japão?</h2>
+        </div>
+    </div>
 
-        <input type="radio" name="q5" value="Pequim"> Pequim<br>
-        <input type="radio" name="q5" value="Seul"> Seul<br>
-        <input type="radio" name="q5" value="Tóquio"> Tóquio<br>
-        <input type="radio" name="q5" value="Bangkok"> Bangkok<br>
 
-        <br><br>
+    <!-- PERGUNTA 2 -->
 
-        <button type="submit">Finalizar Quiz</button>
+    <div class="pergunta">
+        <div class="pergunta-box">
 
-    </form>
+            <div class="numero">
+                Pergunta 2 de 15
+            </div>
+
+            <h2>
+                Qual é a capital da Austrália?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="Sydney">
+                Sydney
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="Melbourne">
+                Melbourne
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="Canberra">
+                Canberra
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q2" value="Perth">
+                Perth
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 3 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 3 de 15
+            </div>
+
+            <h2>
+                Qual país é frequentemente associado ao formato de um hexágono?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="Italia">
+                Itália
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="Franca">
+                França
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="Espanha">
+                Espanha
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q3" value="Alemanha">
+                Alemanha
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 4 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 4 de 15
+            </div>
+
+            <h2>
+                Qual destes países não faz parte da América do Sul?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="Bolivia">
+                Bolívia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="Chile">
+                Chile
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="Panama">
+                Panamá
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q4" value="Argentina">
+                Argentina
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 5 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 5 de 15
+            </div>
+
+            <h2>
+                Qual é o maior país da América do Sul em extensão territorial?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="Argentina">
+                Argentina
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="Brasil">
+                Brasil
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="Peru">
+                Peru
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q5" value="Colombia">
+                Colômbia
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 6 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 6 de 15
+            </div>
+
+            <h2>
+                Em qual país está localizada a cidade de Istambul?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q6" value="Grecia">
+                Grécia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q6" value="Turquia">
+                Turquia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q6" value="Bulgaria">
+                Bulgária
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q6" value="Georgia">
+                Geórgia
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 7 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 7 de 15
+            </div>
+
+            <h2>
+                Qual é o único país que possui fronteira terrestre com Portugal?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q7" value="Franca">
+                França
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q7" value="Italia">
+                Itália
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q7" value="Espanha">
+                Espanha
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q7" value="Andorra">
+                Andorra
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 8 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 8 de 15
+            </div>
+
+            <h2>
+                Em qual país está localizada a região histórica da Transilvânia?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q8" value="Romenia">
+                Romênia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q8" value="Hungria">
+                Hungria
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q8" value="Servia">
+                Sérvia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q8" value="Croacia">
+                Croácia
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 9 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 9 de 15
+            </div>
+
+            <h2>
+                Qual país possui território localizado tanto na Europa quanto na Ásia?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q9" value="Turquia">
+                Turquia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q9" value="Portugal">
+                Portugal
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q9" value="Noruega">
+                Noruega
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q9" value="Irlanda">
+                Irlanda
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 10 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 10 de 15
+            </div>
+
+            <h2>
+                Qual é a capital da Nova Zelândia?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q10" value="Auckland">
+                Auckland
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q10" value="Christchurch">
+                Christchurch
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q10" value="Wellington">
+                Wellington
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q10" value="Hamilton">
+                Hamilton
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 11 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 11 de 15
+            </div>
+
+            <h2>
+                Qual país é conhecido por possuir o maior número de ilhas do mundo?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q11" value="Indonesia">
+                Indonésia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q11" value="Filipinas">
+                Filipinas
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q11" value="Suecia">
+                Suécia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q11" value="Canada">
+                Canadá
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 12 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 12 de 15
+            </div>
+
+            <h2>
+                Qual destes países não possui saída para o mar?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q12" value="Bolivia">
+                Bolívia
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q12" value="Chile">
+                Chile
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q12" value="Uruguai">
+                Uruguai
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q12" value="Equador">
+                Equador
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 13 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 13 de 15
+            </div>
+
+            <h2>
+                Qual é a capital da Islândia?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q13" value="Oslo">
+                Oslo
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q13" value="Helsinque">
+                Helsinque
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q13" value="Reykjavik">
+                Reykjavik
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q13" value="Estocolmo">
+                Estocolmo
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 14 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 14 de 15
+            </div>
+
+            <h2>
+                Qual país é formado por Inglaterra, Escócia, País de Gales e Irlanda do Norte?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q14" value="ReinoUnido">
+                Reino Unido
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q14" value="Irlanda">
+                Irlanda
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q14" value="GraBretanha">
+                Grã-Bretanha
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q14" value="Inglaterra">
+                Inglaterra
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- PERGUNTA 15 -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Pergunta 15 de 15
+            </div>
+
+            <h2>
+                Em qual país está localizado o Monte Fuji?
+            </h2>
+
+            <label class="alternativa">
+                <input type="radio" name="q15" value="China">
+                China
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q15" value="Coreia">
+                Coreia do Sul
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q15" value="Japao">
+                Japão
+            </label>
+
+            <label class="alternativa">
+                <input type="radio" name="q15" value="Tailandia">
+                Tailândia
+            </label>
+
+        </div>
+    </div>
+
+
+    <!-- FINAL -->
+
+    <div class="pergunta">
+        <div class="pergunta-box">
+
+            <div class="numero">
+                Final do Quiz
+            </div>
+
+            <h2>
+                🎉 Você chegou ao final!
+            </h2>
+
+            <p>
+                Clique no botão abaixo para ver seu resultado.
+            </p>
+
+            <button class="finalizar" type="submit">
+                Finalizar Quiz
+            </button>
+
+        </div>
+    </div>
+
+</form>
+
+
+<script>
+
+    const perguntas = document.querySelectorAll(".pergunta-box");
+
+    const observador = new IntersectionObserver(function(elementos) {
+
+        elementos.forEach(function(elemento) {
+
+            if (elemento.isIntersecting) {
+                elemento.target.classList.add("visivel");
+            }
+
+        });
+
+    }, {
+        threshold: 0.5
+    });
+
+
+    perguntas.forEach(function(pergunta) {
+        observador.observe(pergunta);
+    });
+
+</script>
 
 </body>
+
 </html>

@@ -3,27 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BrainQuiz</title>
-    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>BrainQuiz</h1>
+    <main class="pagina-inicial">
 
-    <p>Teste seus conhecimentos de forma divertida!</p>
+        <div class="inicio">
 
-    <a href="login.php">
-        <button>Entrar</button>
-    </a>
+            <div class="icone-inicio">🧠</div>
 
-    <a href="cadastro.php">
-        <button>Criar conta</button>
-    </a>
+            <h1>BrainQuiz</h1>
 
-    <a href="quizzes.php">
-        <button>Quizzes</button>
-    </a>
+            <p>Teste seus conhecimentos de forma divertida!</p>
+
+            <div class="botoes">
+
+                <a href="login.php">Entrar</a>
+
+                <a href="cadastro.php">Criar conta</a>
+
+                <a href="quizzes.php">Quizzes</a>
+
+            </div>
+
+        </div>
+
+    </main>
 
 </body>
 

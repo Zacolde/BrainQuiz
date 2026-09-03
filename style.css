@@ -1,0 +1,490 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+    color: #f8fafc;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    scroll-snap-type: y mandatory;
+}
+
+
+/* CABEÇALHO */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #0f172a;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+
+/* CONTEÚDO */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+
+/* CARDS DOS QUIZZES */
+
+.quizzes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+}
+
+.card {
+    background-color: #1e293b;
+    width: 230px;
+    height: 320px;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background-color: #263449;
+}
+
+
+/* ÍCONES */
+
+.icone {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+
+/* TEXTOS */
+
+.card h2 {
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.5;
+    min-height: 70px;
+}
+
+
+/* BOTÕES */
+
+button {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7c3aed;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #6d28d9;
+    transform: scale(1.05);
+}
+
+
+/* CORES DOS CARDS */
+
+.paises {
+    border-color: #3b82f6;
+}
+
+.corpo {
+    border-color: #ef4444;
+}
+
+.historia {
+    border-color: #f59e0b;
+}
+
+.matematica {
+    border-color: #8b5cf6;
+}
+
+.conhecimentos {
+    border-color: #22c55e;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 30px;
+    color: #94a3b8;
+}
+
+
+/* ================================= */
+/*        PÁGINAS DOS QUIZZES        */
+/* ================================= */
+
+
+/* Cada pergunta ocupa uma tela */
+
+.pergunta {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 20px;
+
+    scroll-snap-align: start;
+
+    animation: aparecer 1s ease;
+}
+
+
+/* Caixa da pergunta */
+
+.pergunta-box {
+    background-color: #1e293b;
+
+    width: 90%;
+    max-width: 750px;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Número da pergunta */
+
+.numero {
+    color: #a78bfa;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* Pergunta */
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.pergunta {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    scroll-snap-align: start;
+}
+
+.pergunta-box {
+    background-color: #1e293b;
+    width: 90%;
+    max-width: 750px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.pergunta-box.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Alternativas */
+
+.alternativa {
+    display: block;
+
+    background-color: #334155;
+
+    padding: 15px;
+
+    margin: 12px 0;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.alternativa:hover {
+    background-color: #475569;
+
+    transform: translateX(5px);
+}
+
+
+/* Botão de seleção */
+
+.alternativa input {
+    margin-right: 10px;
+}
+
+
+/* Botão finalizar */
+
+.finalizar {
+    background-color: #7c3aed;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    margin-top: 25px;
+
+    transition: 0.3s;
+}
+
+.finalizar:hover {
+    background-color: #6d28d9;
+
+    transform: scale(1.05);
+}
+
+
+/* EFEITO FADE */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.home {
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    position: absolute;
+    left: 30px;
+    top: 15px;
+}
+
+.home:hover {
+    color: #a78bfa;
+}
+
+/* PÁGINA INICIAL */
+
+.pagina-inicial {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inicio {
+    width: 90%;
+    max-width: 700px;
+    padding: 60px 40px;
+
+    background-color: #1e293b;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.icone-inicio {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.inicio h1 {
+    font-size: 55px;
+    margin: 10px 0;
+}
+
+.inicio p {
+    color: #cbd5e1;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.botoes a {
+    display: inline-block;
+
+    background-color: #7c3aed;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.botoes a:hover {
+    background-color: #6d28d9;
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/*       PÁGINA DE RESULTADO      */
+/* ============================= */
+
+.pagina-resultado {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado {
+    background-color: #1e293b;
+
+    width: 90%;
+    max-width: 650px;
+
+    padding: 50px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.resultado h1 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+.resultado h2 {
+    font-size: 30px;
+    color: #a78bfa;
+    margin-bottom: 20px;
+}
+
+.resultado p {
+    color: #cbd5e1;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.voltar {
+    display: inline-block;
+
+    background-color: #7c3aed;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    background-color: #6d28d9;
+    transform: scale(1.05);
+}
