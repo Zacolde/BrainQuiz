@@ -1,72 +1,86 @@
-         <?php
-         start_session();
+<?php
 
-    function validarSenha($senha, $confirmar_senha) {
-        if ($senha == $confirmar_senha) {
-            return true;
-        } else {
-            return false;
-        }
+session_start();
+
+function validarSenha($senha, $confirmar_senha) {
+
+    if ($senha == $confirmar_senha) {
+        return true;
+    } else {
+        return false;
     }
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-             $senha = $_POST["senha"];
-             $confirmar_senha = $_POST["confirmar_senha"];
-             $email = $_POST["email"];
+}
 
-            $_SESSION['senha'] = $senha;
-            $_SESSION['email'] = $email;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-            if (validarSenha($senha, $confirmar_senha)) {
-             header("Location: login.php");
-                exit;
-             } else {
-             echo "As senhas devem ser iguais!";
-              }
+    $senha = $_POST["senha"];
+    $confirmar_senha = $_POST["confirmar_senha"];
+    $email = $_POST["email"];
 
-            }
+    if (validarSenha($senha, $confirmar_senha)) {
 
-         ?>
+        $_SESSION['senha'] = $senha;
+        $_SESSION['email'] = $email;
+
+        header("Location: login.php");
+        exit;
+
+    } else {
+
+        echo "As senhas devem ser iguais!";
+
+    }
+
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Cadastro</title>
-        <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
     <div class="cadastro">
-    <h1>Cadastro</h1>
 
-    <form action="cadastro.php" method="POST">
+        <h1>Cadastro</h1>
 
-        <label>Nome:</label>
-        <input type="text" name="nome" required>
+        <form action="cadastro.php" method="POST">
 
-        <br><br>
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
 
-        <label>Email:</label>
-        <input type="email" name="email" required>
+            <br><br>
 
-        <br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-        <label>Senha:</label>
-        <input type="password" name="senha" required>
+            <br><br>
 
-       
-        <br><br>
-        
-        <label>Confirme sua senha:</label>
-        <input type="password" name="confirmar_senha" required>
-        
+            <label>Senha:</label>
+            <input type="password" name="senha" required>
 
-        <br><br>
+            <br><br>
 
-        <input type="submit" value="Cadastrar">
-        
-     </form>
+            <label>Confirme sua senha:</label>
+            <input type="password" name="confirmar_senha" required>
+
+            <br><br>
+
+            <input type="submit" value="Cadastrar">
+
+        </form>
+
+    </div>
 
 </body>
-</html>
 
+</html>

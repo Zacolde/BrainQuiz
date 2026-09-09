@@ -1,50 +1,70 @@
 <?php
+
 session_start();
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-             $senha = $_POST["senha"];
-             $email = $_POST["email"];
+    $senha = $_POST["senha"];
+    $email = $_POST["email"];
 
-            if ($senha == $_SESSION['senha'] && $email == $_SESSION['email']) {
-                 header("Location: quizzes.php");
+    if (isset($_SESSION['senha']) && isset($_SESSION['email'])) {
+
+        if ($senha == $_SESSION['senha'] && $email == $_SESSION['email']) {
+
+            header("Location: quizzes.php");
             exit();
-            } else {
-                echo "Email ou senha incorretos!";
-            }
 
-            $_SESSION['senha'] = $senha;
-            $_SESSION['email'] = $email;
+        } else {
+
+            echo "<p class='erro'>Email ou senha incorretos!</p>";
+
+        }
+
+    } else {
+
+        echo "Nenhuma conta cadastrada. Crie uma conta primeiro!";
+
+    }
+
+}
 
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
+
     <title>Login</title>
-        <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
     <div class="login">
-    <h1>Login</h1>
 
-    <form action="login.php" method="POST">
+        <h1>Login</h1>
 
-        <label>Email:</label>
-        <input type="email" name="email" required>
+        <form action="login.php" method="POST">
 
-        <br><br>
+            <label>Email:</label>
+            <input type="email" name="email" required>
 
-        <label>Senha:</label>
-        <input type="password" name="senha" required>
+            <br><br>
 
-        <br><br>
+            <label>Senha:</label>
+            <input type="password" name="senha" required>
 
-        <input type="submit" value="Entrar">
-        
-     </form>
+            <br><br>
+
+            <input type="submit" value="Entrar">
+
+        </form>
+
+    </div>
 
 </body>
-</html>
 
+</html>

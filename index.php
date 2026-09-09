@@ -25,7 +25,6 @@
 
                 <a href="cadastro.php">Criar conta</a>
 
-                <a href="quizzes.php">Quizzes</a>
 
             </div>
 
