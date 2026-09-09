@@ -14,12 +14,14 @@ function validarSenha($senha, $confirmar_senha) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $nome = $_POST["nome"];
     $senha = $_POST["senha"];
     $confirmar_senha = $_POST["confirmar_senha"];
     $email = $_POST["email"];
 
     if (validarSenha($senha, $confirmar_senha)) {
 
+        $_SESSION['nome'] = $nome;
         $_SESSION['senha'] = $senha;
         $_SESSION['email'] = $email;
 
@@ -28,7 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     } else {
 
-        echo "As senhas devem ser iguais!";
+         echo "<p class='erro'>As senhas devem ser iguais!</p>";
+
 
     }
 

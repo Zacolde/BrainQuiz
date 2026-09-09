@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     } else {
 
-        echo "Nenhuma conta cadastrada. Crie uma conta primeiro!";
+        echo "<p class='erro'>Nenhuma conta cadastrada. Crie uma conta primeiro!</p>";
 
     }
 

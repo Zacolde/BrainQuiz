@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,10 +31,10 @@
 
     <main>
 
-        <h1>Escolha seu Quiz</h1>
+        <h1>Bem-vindo(a), <?php echo $_SESSION['nome']; ?>! Escolha um quiz.</h1>
 
         <p class="subtitulo">
-            Teste seus conhecimentos e descubra quanto você sabe!
+            Teste seus conhecimentos, descubra quanto você sabe e divirta-se!
         </p>
 
         <div class="quizzes">
